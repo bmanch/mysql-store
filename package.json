@@ -1,0 +1,22 @@
+{
+  "name": "mysql-store",
+  "version": "1.0.0",
+  "description": "CLI Bamazon",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmanch/mysql-store.git"
+  },
+  "author": "Brian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmanch/mysql-store/issues"
+  },
+  "homepage": "https://github.com/bmanch/mysql-store#readme",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
+}
