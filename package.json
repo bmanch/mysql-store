@@ -10,13 +10,15 @@
     "type": "git",
     "url": "git+https://github.com/bmanch/mysql-store.git"
   },
-  "author": "Brian",
+  "author": "Brian Manchester",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bmanch/mysql-store/issues"
   },
   "homepage": "https://github.com/bmanch/mysql-store#readme",
   "dependencies": {
-    "prompt": "^1.0.0"
+    "cli-table": "^0.3.1",
+    "inquirer": "^3.0.6",
+    "mysql": "^2.13.0"
   }
 }
