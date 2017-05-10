@@ -1,17 +1,24 @@
 var mysql = require("mysql");
 var inquirer = require("inquirer");
 var Table = require("cli-table");
+var departments = [];
 var connection = mysql.createConnection({
 	host: "localhost",
 	port: 3306,
 	user: "root",
-	password: "82flatBENCH71",
+	password: "83meTOOdo91",
 	database: "Bamazon"
 });
 
 connection.connect(function(err) {
 	if (err) throw err;
-	manage();
+	connection.query("SELECT department_name FROM departments", function(err, res) {
+		if (err) throw err;
+		for (var i = 0; i < res.length; i++) {
+			departments.push(res[i].department_name);
+		}
+		manage();
+	});
 });
 
 function manage() {
@@ -154,7 +161,7 @@ function addProd() {
 			name: "department",
 			type: "list",
 			message: "Choose which department this will go in.",
-			choices: ["Electronics", "Sports", "Books", "Grocery"]
+			choices: departments
 		},
 		{
 			name: "price",

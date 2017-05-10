@@ -5,7 +5,7 @@ var connection = mysql.createConnection({
 	host: "localhost",
 	port: 3306,
 	user: "root",
-	password: "82flatBENCH71",
+	password: "83meTOOdo91",
 	database: "Bamazon"
 });
 var prodId = [];
@@ -76,6 +76,20 @@ function shop() {
 
 				console.log("Purchase total: $" + amount + "\nThank you for your purchase!\n");
 
+				//For the supervisor capabilities
+				connection.query("SELECT department_name FROM products WHERE id=?", [answer.productId], function(err, res) {
+					if (err) throw err;
+					var depName = res[0].department_name;
+
+					connection.query("SELECT total_sales FROM departments WHERE department_name=?", [depName], function(err, res) {
+						if (err) throw err;
+						var newTotalSales = res[0].total_sales + amount;
+						connection.query("UPDATE departments SET ? WHERE ?", [ { total_sales: newTotalSales }, { department_name: depName }], function(err, res) {
+							if (err) throw err;
+						});
+					});
+				});
+
 				inquirer.prompt([
 					{
 						name: "next",
@@ -98,6 +112,5 @@ function shop() {
 				});
 			}
 		});
-
 	});
 }
