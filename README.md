@@ -20,11 +20,11 @@ This purchase affects stock quantity of the item
 
 ![image2](/screenshots/customer_purchase_effect1.png)
 
-A customer purchase also involves the departments database
+A customer purchase also involves the departments table
 
 ![image3](/screenshots/customer_purchase_departments_view.png)
 
-This purchase affects the total_sales of the department
+This purchase affects the total_sales of the respective department
 
 ![image4](/screenshots/customer_purchase_effect2.png)
 
@@ -34,7 +34,7 @@ The manager has different options
 
 ![image1](/screenshots/manager_options.png)
 
-The manager can view the products
+The manager can view the products in the store
 
 ![image2](/screenshots/manager_view_products.png)
 
@@ -54,11 +54,11 @@ This affects the stock quantity of the respective item
 
 The manager can add a new product to the store
 
-![image7](/screenshots/manager_add_product.png)
+![image7](/screenshots/manager_add_new_product.png)
 
 This affects the list of products in the store
 
-![image8](/screenshots/mangaer_add_new_product_effect.png)
+![image8](/screenshots/manager_add_new_product_effect.png)
 
 ### Bamazon Supervisor Images
 
