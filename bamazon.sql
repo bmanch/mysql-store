@@ -97,3 +97,19 @@ VALUES ("Books", 1000);
 
 INSERT INTO departments (department_name, over_head_costs)
 VALUES ("Grocery", 3000);
+
+UPDATE departments
+SET total_sales = 0
+WHERE department_id = 1;
+
+UPDATE departments
+SET total_sales = 0
+WHERE department_id = 2;
+
+UPDATE departments
+SET total_sales = 0
+WHERE department_id = 3;
+
+UPDATE departments
+SET total_sales = 0
+WHERE department_id = 4;
